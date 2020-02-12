@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min första Front-End</title>
+    <link rel="stylesheet" href="../style.css"> <!-- CSS -->
+
+</head>
+
+<body onload="getUserInfo()">
+    <section>
+        <header>
+            <a href="../"><img id="logo" src="../logo.png" alt="Logo" /></a>
+            <nav>
+                <ul>
+                    <li><a href="../projekt1/">Projekt 1</a></li>
+                    <li><a href="../projekt2/">Projekt 2</a></li>
+                    <li><a href="../projekt3/">Projekt 3</a></li>
+                    <li><a href="../rapport/">Rapport</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article>
+            <h1>Projekt 2</h1>
+            <p>Här kommer projekt 2</p>
+        </article>
+        <article>
+            <div>
+                <p id="browser">Browser: </p>
+                <p id="language">Language: </p>
+                <p id="OS">OS: </p>
+                <p id="resolution"></p>
+                <p id="latitude"></p>
+                <p id="longitude"></p>
+                <p id="ip">ip: </p>
+            </div>
+            <section class="memoryGame">
+                    <div class="memoryBox" data-framework="pinterest">
+                            <img class="front-face" src="pinterest.svg" alt="facebook">
+                            <img class="back-face" src="memcard.svg" alt="memcard">
+        
+                        </div>
+                    <div class="memoryBox" data-framework="facebook">
+                    <img class="front-face" src="facebook.svg" alt="facebook">
+                    <img class="back-face" src="memcard.svg" alt="memcard">
+
+                </div>
+                <div class="memoryBox" data-framework="pinterest">
+                    <img class="front-face" src="pinterest.svg" alt="facebook">
+                    <img class="back-face" src="memcard.svg" alt="memcard">
+
+
+                </div>
+                <div class="memoryBox" data-framework="facebook">
+                    <img class="front-face" src="facebook.svg" alt="facebook">
+                    <img class="back-face" src="memcard.svg" alt="memcard">
+
+                </div>
+
+                <div class="memoryBox" data-framework="twitter">
+                    <img class="front-face" src="twitter.svg" alt="facebook">
+                    <img class="back-face" src="memcard.svg" alt="memcard">
+
+                </div>
+                <div class="memoryBox" data-framework="instagram">
+                    <img class="front-face" src="instagram.svg" alt="facebook">
+                    <img class="back-face" src="memcard.svg" alt="memcard">
+
+                </div>
+                <div class="memoryBox" data-framework="instagram">
+                    <img class="front-face" src="instagram.svg" alt="facebook">
+                    <img class="back-face" src="memcard.svg" alt="memcard">
+
+                </div>
+
+                <div class="memoryBox" data-framework="twitter">
+                    <img class="front-face" src="twitter.svg" alt="facebook">
+                    <img class="back-face" src="memcard.svg" alt="memcard">
+
+                </div>
+
+    
+
+            </section>
+            
+            <div class="row">
+                    <div class="column">
+                      <img src="twitter.svg" alt="Twitter" style="width:100%" onmouseover="currentSlide(1);">
+                    </div>
+                    <div class="column">
+                      <img src="facebook.svg" alt="Facebook" style="width:100%" onmouseover="currentSlide(2);">
+                    </div>
+                    <div class="column">
+                      <img src="instagram.svg" alt="Instagram" style="width:100%" onmouseover="currentSlide(3);">
+                    </div>
+                    <div class="column">
+                      <img src="pinterest.svg" alt="Pinterest" style="width:100%" onmouseover="currentSlide(4);">
+                    </div>
+                  </div>
+
+                  <div class="slideshow-container">
+                        <div class="empty fade">
+                          <img src="twitter.svg" style="width:100%">
+                        </div>
+                        <div class="empty fade">
+                          <img src="facebook.svg" style="width:100%">
+                        </div>
+                        <div class="empty fade">
+                          <img src="instagram.svg" style="width:100%">
+                        </div>
+                        <div class="empty fade">
+                          <img src="pinterest.svg" style="width:100%">
+                        </div>
+                      </div>
+    
+
+        <div class="timer" onclick="startAndStop()" id="timer" oncontextmenu="resetAndInter()">
+          <div>
+          </div>
+          <p> Timer här</p>
+        </div>
+        <div id="timerInter">Interval</div>
+
+        <button onclick="handSelect()">Spela sten sax påse</button>
+
+        <div id="canvasContainer">
+          <canvas id="canvasView" width="500" height="500">
+          <p> Your browser is not supported</p></canvas>
+        </div>
+
+
+        <div id="images">
+          <div id="drag8" draggable="true" ondragstart="drag(event)" data-fw="div8"></div>
+          <div id="drag3" draggable="true" ondragstart="drag(event)" data-fw="div3"></div>
+          <div id="drag5" draggable="true" ondragstart="drag(event)" data-fw="div5"></div>
+          <div id="drag1" draggable="true" ondragstart="drag(event)" data-fw="div1"></div>
+          <div id="drag7" draggable="true" ondragstart="drag(event)" data-fw="div7"></div>
+          <div id="drag6" draggable="true" ondragstart="drag(event)" data-fw="div6"></div>
+          <div id="drag4" draggable="true" ondragstart="drag(event)" data-fw="div4"></div>
+          <div id="drag9" draggable="true" ondragstart="drag(event)" data-fw="div9"></div>
+          <div id="drag2" draggable="true" ondragstart="drag(event)" data-fw="div2"></div>
+
+        </div>
+                          
+        <div id="text">
+          <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" data-fw="div1"></div>
+          <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" data-fw="div2"></div>
+          <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)" data-fw="div3"></div>
+          <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)" data-fw="div4"></div>
+          <div id="div5" ondrop="drop(event)" ondragover="allowDrop(event)" data-fw="div5"></div>
+          <div id="div6" ondrop="drop(event)" ondragover="allowDrop(event)" data-fw="div6"></div>
+          <div id="div7" ondrop="drop(event)" ondragover="allowDrop(event)" data-fw="div7"></div>
+          <div id="div8" ondrop="drop(event)" ondragover="allowDrop(event)" data-fw="div8"></div>
+          <div id="div9" ondrop="drop(event)" ondragover="allowDrop(event)" data-fw="div9"></div>
+        </div>
+        </article>
+
+    </section>
+
+    <footer>
+        Made by Emil
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>

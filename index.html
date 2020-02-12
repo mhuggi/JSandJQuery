@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+<head> <!-- Metatags, stil, och script som ska köras innan sidan lästs in  -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramverk för Front-End</title>
+    <link rel="stylesheet" href="style.css"> <!-- CSS -->
+    <script src="script.js"></script> <!-- Javascript -->
+</head>
+<body>
+    <section> <!-- Section har max bredd 800px (undantag mobil/pad) -->
+
+        <header> <!-- Logo och meny i headern, logon länkar till splash -->
+            <a href="./"><img id="logo" src="logo.PNG" alt="Logo" /></a>
+            <nav>
+                <ul>
+                    <li><a href="projekt1/">Projekt 1</a></li>
+                    <li><a href="projekt2/">Projekt 2</a></li>
+                    <li><a href="projekt3/">Projekt 3</a></li>
+                    <li><a href="rapport/">Rapport</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article> <!-- Artiklar placerar sig snyggt efter varann -->
+            <h1>Hemsidan</h1>
+            <p>En "splash" page</p>
+            <p>Välkommen dennis, här är mitt frontendprojekt</p>
+            <p>Projekten och rapporten hittar du i huvudmenyn</p>
+            <button onclick="handSelect()">Spela</button>
+            <p id="answer">Svaret är: </p>
+
+
+        </article>
+
+        <!-- Ett typiskt designelement för moderna sajter -->
+        <span class="separator"></span>
+
+        <article>
+            <h2>Länkar och Target</h2>
+            <p>Rubriken är en underrubrik h2</p>
+        </article>
+
+        
+    </section>
+
+    <!-- Märk att footern är efter section, men innan "containern" body -->
+    <footer> 
+        Made by Emil
+    </footer>
+    <!-- Avancerade designer (sidomeny etc) behöver ofta även en container div -->
+    
+</body>
+</html>
